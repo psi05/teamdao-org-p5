@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  cursor: none;
+
+}
+
+body {
+  background: #000;
+  color: #E5E5E5;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  --cursor-color: #29ff2f;
+}
+
+html.dark-mode {
+  --cursor-color: #29ff2f;
+}
+
+@supports ((-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px))) {
+  .translucent {
+    background: rgba(0, 0, 0, 0.5);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+  }
+
+  .blur-me {
+    background: rgba(0, 0, 0, 0.6);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    will-change: backdrop-filter;
+  }
+
+  .mint-me-btn {
+    background: rgba(0, 0, 0, 0.6);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    border-radius: 1rem;
+  }
+}
+
+@font-face {
+  font-family: Matrix;
+  src: url("/fonts/matrix-regular.ttf");
+}
+
+@font-face {
+  font-family: MatrixBold;
+  src: url("/fonts/matrix-bold.ttf");
+}
+
+@font-face {
+  font-family: Teamdao;
+  src: url("/fonts/teamdao.otf");
+}
+
+@font-face {
+  font-family: F1;
+  src: url("/fonts/f1.ttf");
+}
+
+img.emoji {
+  width: 1.2em;
+  height: 1.2em;
+  margin: 0 0.05em 0 0.1em;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+
+.main-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding-right: 3vw;
+  padding-left: 3vw;
+  box-sizing: content-box;
+}
+
+@media screen and (max-width: 768px) {
+  .main-container {
+    padding-right: 3vw;
+    padding-left: 3vw;
+    box-sizing: content-box;
+  }
+}
+
+.navbar-container {
+  max-width: 1900px;
+  margin: 0 auto;
+  padding-right: 2vw;
+  padding-left: 2vw;
+  box-sizing: content-box;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-container {
+    padding-right: 3vw;
+    padding-left: 3vw;
+    box-sizing: content-box;
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+
+  scrollbar-width: none;
+
+}
